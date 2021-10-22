@@ -46,58 +46,64 @@ $(function() {
 
 <!-- customize labels of htmlcommentbox.com -->
 <script>
-// This code goes ABOVE the main HTML Comment Box code!
-// replace the text in the single quotes below to customize labels.
+/* This code goes ABOVE the main HTML Comment Box code!
+ replace the text in the single quotes below to customize labels.*/
 hcb_user = {
+    /* L10N */
     comments_header : 'コメント',
-    name_label : 'お名前',
-    content_label: 'ここにコメントを入力',
-    submit : 'コメントする',
-    logout_link : 'ログアウトリンク',
-    admin_link : '管理者リンク',
-    no_comments_msg: 'コメントなし',
-    add:'コメントを追加する',
-    again:'さらにコメントを入力する',
-    rss:'',
-    said:'さんのコメント',
-    prev_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
-    next_page:'<img src="//www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
-    showing:'Showing',
+    name_label : '名前',
+    content_label: 'ここにコメントを入力してください',
+    submit : 'コメントを送信',
+    logout_link : '<img title="log out" src="https://www.htmlcommentbox.com/static/images/door_out.svg" alt="[logout]" class="hcb-icon hcb-door-out"/>',
+    admin_link : '<img src="https://www.htmlcommentbox.com/static/images/door_in.svg" alt="[login]" class="hcb-icon hcb-door-in"/>',
+    no_comments_msg: 'まだ誰もコメントしていません',
+    add:'「コメントを追加」',
+    again: '別のコメントを投稿する',
+    rss:'<img src="https://www.htmlcommentbox.com/static/images/feed.svg" class="hcb-icon" alt="rss"/> ',
+    said:'「言った:」',
+    prev_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+    next_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+    showing:'「表示中」',
     to:'to',
-    website_label:'website (optional)',
-    email_label:'email',
-    anonymous:'名無しさん',
-    mod_label:'(管理人)',
-    subscribe:'email me replies',
-    are_you_sure:'Do you want to flag this comment as inappropriate?',
-  
-    reply:'<img src="//www.htmlcommentbox.com/static/images/reply.png"/> 返信',
-    flag:'',
-    like:'<img src="//www.htmlcommentbox.com/static/images/like.png"/> いいね',
-  
-    //dates
-    days_ago:'日前',
-    hours_ago:'時間前',
+    website_label:'ウェブサイト（オプション）',
+    email_label:'メール',
+    anonymous:'名無し',
+    mod_label:'(mod)',
+    subscribe:'Email Me Replies',
+    add_image:'画像の追加',
+    are_you_sure:'このコメントに不適切なフラグを付けますか？',
+
+    reply:'返信',
+    flag:'国旗',
+    like:'いいね',
+
+    /* dates */
+    days_ago:'数日前',
+    hours_ago:'数時間前',
     minutes_ago:'分前',
-    within_the_last_minute:'数秒前',
-  
-    msg_thankyou:'コメントありがとうございます',
-    msg_approval:'このコメントは許可され次第反映されます',
-    msg_approval_required:'コメントありがとうございます',
-  
-    err_bad_html:'コメントに悪い言葉が含まれていました',
-    err_bad_email:'有効なメールアドレスを入力してください',
-    err_too_frequent:'コメントを投稿するまで数秒待ってください',
-    err_comment_empty:'コメントが空白だったため投稿されませんでした!',
-    err_denied:'あなたのコメントは無効',
-  
-    //SETTINGS
+    within_the_last_minute:'最後の1分以内',
+
+    msg_thankyou:'コメントありがとうございます！',
+    msg_approval:'注：このコメントは承認されるまで公開されません',
+    msg_approval_required:'コメントありがとうございます！あなたのコメントは、モデレーターによって承認されると表示されます.',
+
+    err_bad_html:'コメントによくない言葉を含んでいました.',
+    err_bad_email:'有効なメールアドレスを入力してください.',
+    err_too_frequent:'コメントを投稿するまでに数秒待つ必要があります.',
+    err_comment_empty:'コメントは空だったため投稿されませんでした！',
+    err_denied:'コメントは受け入れられませんでした.',
+    err_unknown:'不明な理由でコメントがブロックされました。これを報告してください.',
+    err_spam:'コメントがスパムとして検出されました.',
+    err_blocked:'コメントはブロックされました.',
+
+    /* SETTINGS */
     MAX_CHARS: 8192,
-    PAGE:'', // ID of the webpage to show comments for. defaults to the webpage the user is currently visiting.
-    RELATIVE_DATES:true // show dates in the form "X hours ago." etc.
+    PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+    ON_COMMENT: function(){}, /* Function to call after commenting. */
+    RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
 };
 </script>
-<!- done customizing labels of htmlcommentbox.com -->
+<!-- done customizing labels of htmlcommentbox.com -->
 
 <!-- 日本語化したJSを読み込む -->
 <script type="text/javascript" src="/js/htmlcommentbox.js"></script>
